@@ -1,6 +1,6 @@
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from azure.ai.projects.models import MessageTextContent, FileSearchTool,
+from azure.ai.projects.models import MessageTextContent, FileSearchTool
 from dotenv import load_dotenv
 import os
 import time
@@ -60,8 +60,8 @@ with project_client:
         # [END create_run]
         print(f"Run status: {run.status}")
     
-    project_client.agents.delete_agent(agent.id)
-    print("Deleted agent")
+    # project_client.agents.delete_agent(agent.id)
+    # print("Deleted agent")
 
     messages = project_client.agents.list_messages(thread_id=thread.id)
 
